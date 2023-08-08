@@ -1,0 +1,465 @@
+$primary_blue: #007F61;
+$light_grey: #C8C8C8;
+$light_borders: #DADADA;
+$radio_height: 20;
+$radio_width: 20;
+
+@mixin xs {
+    @media screen and (max-width: 250px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media screen and (min-width: 251px) and (max-width: 550px) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media screen and (min-width: 551px) and (max-width: 750px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media screen and (min-width: 751px) and (max-width: 1250px) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media screen and (min-width: 1250px) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 20px 0 0px 0px;
+}
+
+.primary-font-color {
+    color: $primary_blue;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.h-full {
+    height: 100% !important;
+}
+
+.text-muted {
+    color: $light_grey
+}
+
+.align-end {
+    align-self: flex-end;
+}
+
+.justify-end {
+    justify-content: space-between;
+}
+
+.pt-1 {
+    padding-top: 0.5em;
+}
+
+.pt-2 {
+    padding-top: 1em;
+}
+
+.pt-3 {
+    padding-top: 1.5em;
+}
+
+.pt-4 {
+    padding-top: 2em;
+}
+
+.pt-5 {
+    padding-top: 2.5em;
+}
+
+.pb-1 {
+    padding-bottom: 0.5em;
+}
+
+.pb-2 {
+    padding-bottom: 1em;
+}
+
+.pb-3 {
+    padding-bottom: 1.5em;
+}
+
+.pb-4 {
+    padding-bottom: 2em;
+}
+
+.pb-5 {
+    padding-bottom: 2.5em;
+}
+
+.mb-1 {
+    margin-bottom: 0.5em;
+}
+
+.mb-2 {
+    margin-bottom: 1em;
+}
+
+.mb-3 {
+    margin-bottom: 1.5em;
+}
+
+.mb-4 {
+    margin-bottom: 2em;
+}
+
+.mb-5 {
+    margin-bottom: 2.5em;
+}
+
+.mt-1 {
+    margin-top: 0.5em;
+}
+
+.mt-2 {
+    margin-top: 1em;
+}
+
+.mt-3 {
+    margin-top: 1.5em;
+}
+
+.mt-4 {
+    margin-top: 2em;
+}
+
+.mt-5 {
+    margin-top: 2.5em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.w-1-2 {
+    width: 50%;
+}
+
+.md:w-1-2 {
+    @include md {
+        width: 50%;
+    }
+}
+
+.lg:w-1-2 {
+    @include lg {
+        width: 50%;
+    }
+}
+
+.w-full {
+    width: 100%;
+}
+
+.md:w-full {
+    @include md {
+        width: 100%;
+    }
+}
+
+.h-screen {
+    height: 100vh;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.self-center {
+    align-self: center;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.d-block {
+    display: block;
+}
+
+.no-wrap {
+    flex-wrap: nowrap !important;
+}
+
+.d-none {
+    display: none;
+}
+
+main {
+    position: relative;
+    height: 100%;
+
+    h1 {
+        background-color: #fff;
+        color: #007F61;
+        font-weight: 600;
+        font-size: 1.5em;
+        padding: 0 35px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        top: -14px;
+
+        @include sm {
+            font-size: 1em;
+            padding: 0 20px;
+        }
+
+        @include md {
+            font-size: 0.8em;
+            padding: 0 25px;
+            top: -8px;
+        }
+
+        @include lg {
+            font-size: 1em;
+            padding: 0 30px;
+        }
+    }
+}
+
+.text-right {
+    text-align: right;
+}
+
+form {
+    width: 90%;
+
+    @include sm {
+        width: 90%;
+    }
+
+    @include md {
+        width: 65%;
+    }
+
+    @include lg {
+        width: 60%;
+    }
+
+    @include xl {
+        width: 40%;
+    }
+
+    section {
+        outline: 1.904px solid #C8C8C8;
+        margin: 25px auto;
+        border-radius: 3.615px
+    }
+
+    label {
+        padding: 10px 20px;
+        font-size: 12px;
+
+        @include md {
+            padding: 10px 20px;
+            font-size: 10px;
+        }
+
+        @include lg {
+            padding: 15px 30px;
+            font-size: 15px;
+        }
+
+        @include xl {
+            padding: 20px 40px;
+            font-size: 20px;
+        }
+    }
+
+    .input-container {
+        padding: 10px;
+
+        @include md {
+            padding: 25px;
+        }
+
+        @include lg {
+            padding: 25px;
+        }
+
+        @include xl {
+            padding: 25px;
+        }
+    }
+
+    input[type='radio'] {
+        display: none;
+    }
+}
+
+.default-radio {
+    border: 2px solid $light_borders ;
+}
+
+.active-radio {
+    border: 2px solid $primary_blue;
+}
+
+.active-section {
+    outline: 1.904px solid $primary_blue;
+    background: #F4FBF9;
+}
+
+.radio-input {
+    position: relative;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+
+    .custom-radio {
+        position: absolute;
+        height: 14.23px;
+        width: 14.23px;
+        background-color: $primary_blue;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include sm {
+            height: $radio_height/1.5+px;
+            width: $radio_width /1.5+px;
+        }
+
+        @include md {}
+
+        @include lg {}
+
+        @include md {}
+    }
+}
+
+.offer-strike {
+    font-size: small;
+    text-decoration: line-through;
+
+    @include sm {
+        font-size: 0.6em;
+    }
+
+    @include md {
+        font-size: 0.6em;
+    }
+
+    @include lg {
+        font-size: 0.6em;
+    }
+}
+
+.variants {
+    margin-left: 85px;
+    padding-bottom: 25px;
+
+    @include sm {
+        margin-left: 36px;
+    }
+
+    @include md {
+        margin-left: 36px;
+    }
+
+    .title {
+        font-size: 0.8em;
+
+        &:nth-child(1) {
+            padding-left: 25px;
+        }
+    }
+
+    span {
+        font-size: 0.8em;
+    }
+
+
+
+    select {
+        width: 100px;
+        padding: 10px;
+        margin: 10px 0 0 15px;
+        border: 0.904px solid #D9D9D9;
+        border-radius: 1.808px;
+        font-size: 14.846px;
+        font-style: normal;
+        font-weight: 400;
+        outline: none;
+        appearance: none;
+        background-image: url(../img/arrow.png);
+        background-size: 10px 15px;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 10px) center;
+
+        @include md {
+            margin: 10px 0 0 5px;
+        }
+
+        @include sm {
+            margin: 10px 0 0 2px;
+        }
+
+        @include xs {
+            margin: 10px 0 0 2px;
+        }
+    }
+
+}
+
+.btn-lg {
+    border: none;
+    background-color: $primary_blue;
+    color: white;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 1.1em;
+    padding: 20px 25px;
+    font-weight: 700;
+}
+
+.copy-rights {
+    margin-top: 8px;
+    font-weight: 100;
+    float: right;
+    font-style: italic;
+}
